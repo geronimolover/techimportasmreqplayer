@@ -180,15 +180,14 @@ async def start(client, message):
             ],
             [
                 InlineKeyboardButton("MOVIE GROUP", url="https://t.me/all_super_movies"),
-                InlineKeyboardButton("SOURCE CODE", url="https://telegra.ph/file/21e06a011217f7308c3c9.jpg
-"),
+                InlineKeyboardButton("STATUS CHANNEL", url="https://t.me/all_super_status"),
             ],
             [
-                InlineKeyboardButton("❔ HOW TO USE ❔", callback_data="help"),
+                InlineKeyboardButton("❔ COMMANS FOR YOU ❔", callback_data="help"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    m=await message.reply_photo(photo="https://telegra.ph/file/2cc60cb6ad087b6f14ed7.png", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
+    m=await message.reply_photo(photo="https://telegra.ph/file/cccd10b06b608e874dafb.png", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
     await mp.delete(m)
     await mp.delete(message)
 
@@ -203,8 +202,7 @@ async def help(client, message):
             ],
             [
                 InlineKeyboardButton("MOVIE GROUP", url="https://t.me/all_super_movies"),
-                InlineKeyboardButton("SOURCE CODE", url="https://telegra.ph/file/21e06a011217f7308c3c9.jpg
-"),
+                InlineKeyboardButton("SOURCE CODE", url="https://telegra.ph/file/21e06a011217f7308c3c9.jpg"),
             ],
             [
                 InlineKeyboardButton("CLOSE 🔐", callback_data="close"),
@@ -213,6 +211,6 @@ async def help(client, message):
     reply_markup = InlineKeyboardMarkup(buttons)
     if msg.get('help') is not None:
         await msg['help'].delete()
-    msg['help'] = await message.reply_photo(photo="https://telegra.ph/file/2cc60cb6ad087b6f14ed7.png", caption=HELP_TEXT, reply_markup=reply_markup)
+    msg['help'] = await message.reply_photo(photo="https://telegra.ph/file/0db521c78f1a501b3bc6a.png", caption=HELP_TEXT, reply_markup=reply_markup)
     await mp.delete(message)
 
